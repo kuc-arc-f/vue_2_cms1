@@ -12,26 +12,6 @@
                 <li class="nav-item active">
                     <router-link  to="/about" class="nav-link">About</router-link>
                 </li>
-                <!--
-                <li class="nav-item active">
-                    <router-link  to="/users/logout" class="nav-link">Logout</router-link>
-                </li>
-                <li class="nav-item active">
-                    <router-link  to="/users/check" class="nav-link">User-check</router-link>
-                </li>
-                <li class="nav-item active">
-                    <router-link  to="/users/new" class="nav-link">User-add</router-link>
-                </li>
-                <li class="nav-item active">
-                    <router-link  to="/users/login" class="nav-link">Login</router-link>
-                </li>
-                <li class="nav-item active">
-                    <router-link  to="/tasks" class="nav-link">Tasks</router-link>
-                </li>
-                -->
-                <li class="nav-item active">
-                    <router-link  to="/repos" class="nav-link">Repos</router-link>
-                </li>
                 <li class="nav-item active">
                     <router-link  to="/blogs" class="nav-link">Blogs</router-link>
                 </li>

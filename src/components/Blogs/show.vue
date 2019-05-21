@@ -1,9 +1,9 @@
 <template>
     <div>
         <h1>{{ item.title }}</h1>
-        <br />
+        <p style="margin-bottom: 20px;">Date: {{ item.date_str }}</p>
         <hr />
-        <div v-html="item.content"></div>
+        <div id="post_item" v-html="item.content"></div>
     </div>
 </template>
 
@@ -43,5 +43,18 @@ export default {
     }
 }
 </script>
+<!-- -->
+<style>
+/* div#post_item > h3{ color :gray; } */
+div#post_item > p > img{
+    max-width : 100%;
+    height : auto;
+}
+div#post_item > hr {
+  height: 1px;
+  background-color: #000;
+  border: none;
+}
+</style>
 
 

@@ -9,7 +9,7 @@
             <label for="TopicContent">content</label>
             <textarea class="form-control" id="content" rows="10" v-model="content"></textarea>
         </div>
-        <button v-on:click="createTask()">投稿</button>    
+        <button v-on:click="createTask()" class="btn btn-primary">投稿</button>    
     </div>
 </template>
 
@@ -36,6 +36,7 @@ export default {
     },
     methods: {
         createTask: function() {
+            var self = this
             console.log('#btn-1');
             var hostUrl= this.baseUrl + 'blogs/api_add';
             var title = this.title;
@@ -50,6 +51,9 @@ export default {
             }).done(function(data) {
                 console.log("ajax-ok");
                 console.log(data);
+                var arr=[{message : '登録が完了しました。'}]
+                self.set_exStorage(self.sysConst.STORAGE_KEY_flash, arr )
+                self.$router.push('/blogs')                
             }).fail(function(XMLHttpRequest, textStatus, errorThrown) {
                 console.log("ajax-error");
                 console.log( errorThrown );

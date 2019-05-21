@@ -5,7 +5,6 @@
                 <h3 id="h3_msg" style="margin : 15px;">{{ message }}</h3>
             </span>
         </div>
-
     </div>
 </template>
 

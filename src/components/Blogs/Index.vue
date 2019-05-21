@@ -1,6 +1,8 @@
 <template>
     <div>
-        <h1>Blogs- Index:</h1>
+        <flash-message></flash-message>
+        <h1>Blogs - Index:</h1>
+        
         <hr />
         <router-link :to="'/blogs/new/'" class="btn btn-primary"> add </router-link><br />
         <br />
@@ -21,7 +23,7 @@
                 <router-link :to="'/blogs/show/' + blog.id">{{ blog.title }}</router-link>
                 </h4>
             </td>
-            <td>{{ blog.up_date }}</td>
+            <td>{{ blog.date_str }}</td>
             <td>&nbsp;<router-link :to="'/blogs/edit/' + blog.id" class="btn btn-outline-primary"> edit </router-link>
             </td>
         </tr>
@@ -33,9 +35,11 @@
 <script>
 import axios from 'axios'
 import {Mixin} from '../../mixin'
+import flashMessage from '../../components/Layouts/FlashMessage'
 
 export default {
   mixins:[Mixin],
+  components: { flashMessage },
   created () {
 //    this.check_userState(this.sysConst.STORAGE_KEY_userData, this)
 //    this.user_id = this.get_userId(this.sysConst.STORAGE_KEY_userData )
@@ -69,3 +73,6 @@ export default {
   }
 }
 </script>
+<!-- -->
+<style>
+</style>
